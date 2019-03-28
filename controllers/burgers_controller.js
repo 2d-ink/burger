@@ -3,9 +3,10 @@ var router = express.Router();
 var burger = require("../models/burger")
 
 router.get("/", function(req, res){
-    burger.all(function(burger_data){
-        console.log(burger_data); 
-        res.render("index", {burger_data}); 
+    burger.all(function(data){
+        var hbsObject = {burger_data: data}
+        console.log(hbsObject); 
+        res.render("index", hbsObject); 
 
     });
 });
