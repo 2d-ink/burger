@@ -22,15 +22,15 @@ if (process.env.JAWSDB_URL) {
 } else {
   connection = mysql.createConnection({
     host: "localhost",
-    port: 3306,
+    port: 3000,
     user: "root",
     password: "Formulad1",
     database: "burgers_db"
   });
 };
 
-// Make connection.
+
 connection.connect()
 
-// Export connection for our ORM to use.
+
 module.exports = connection;
